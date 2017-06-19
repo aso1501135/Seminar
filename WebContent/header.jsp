@@ -9,5 +9,6 @@
 <body>
 <div class="header"><img src="logo.jpg" width="150px" height="150px"></div>
 <div><center><h1>ゼミ受講システム</h1></center></div>
+<hr color="#000000">
 </body>
 </html>

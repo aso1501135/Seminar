@@ -9,7 +9,6 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<hr color="#000000">
 	<div class="main">
 		<center>
 			<h2>ゼミ科目 編集</h2>
