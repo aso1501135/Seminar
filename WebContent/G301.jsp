@@ -9,7 +9,6 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-	<hr color="#000000">
 	<div class="main" align="center">
 		<h2>ログイン</h2>
 
