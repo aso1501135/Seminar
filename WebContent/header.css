@@ -1,9 +1,7 @@
-body{
-	background-color:#83b9ff;
-}
 .header{
 	float:left;
 	margin:0;
+	background-color:#83b9ff;
 }
 h1{
 	padding-top:30px;

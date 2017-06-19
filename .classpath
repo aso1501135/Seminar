@@ -8,8 +8,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Volumes/NO NAME/apache-tomcat-7.0.69/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="/Volumes/NO NAME/apache-tomcat-7.0.69/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="/Volumes/NO NAME/apache-tomcat-7.0.69/bin/bootstrap.jar"/>
+	<classpathentry kind="lib" path="/Users/sho_development/Desktop/apache-tomcat-7.0.78/bin/bootstrap.jar"/>
+	<classpathentry kind="lib" path="/Users/sho_development/Desktop/apache-tomcat-7.0.78/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/sho_development/Desktop/apache-tomcat-7.0.78/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/Users/sho_development/Desktop/apache-tomcat-7.0.78/lib/jsp-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
