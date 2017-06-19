@@ -4,18 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="G304.css">
 <title>ログイン(学生)</title>
-<link rel="stylesheet" type="text/css" href="/seminar/css/G201.css">
+<link rel="stylesheet" type="text/css" href="/seminar/css/G304.css">
 </head>
 <body>
-<div align="center">
-<table id="header">
-	<tr>
-		<td style="font-size : 30px">ログイン(学生)
-		<td><a href="G101.jsp">ホームに戻る</a>
-	</tr>
-</table>
-<hr>
+	<%@ include file="header.jsp"%>
+<div class="main" align="center">
+<h2>ログイン</h2>
 	<p>学生IDとパスワードを入力してください<br>
 	<div id="target" style="color: red;">
 		<c:forEach var="error" items="${errorMessageList}" varStatus="status">
@@ -40,5 +36,6 @@
 		<input type="submit" value="ログイン">
 	</form>
 </div>
+<%@ include file="footer.jsp"%>
 </body>
 </html>

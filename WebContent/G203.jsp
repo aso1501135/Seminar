@@ -3,11 +3,14 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="G304.css">
 <%--tableの中身は<c:forEach>で増やす予定
 エラーメッセージは<c:outで増やす予定 --%>
 <title>ゼミ科目登録</title>
 </head>
 <body>
+	<%@ include file="header.jsp"%>
+	<div class="main" align="center">
 	<header> </header>
 	<h2>ゼミ科目登録</h2>
 	<p>
@@ -62,5 +65,7 @@
 		</table>
 		<input type="submit" value="登録" />
 	</form>
+	</div>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>
