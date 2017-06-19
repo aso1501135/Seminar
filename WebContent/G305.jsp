@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>ゼミ受講システム</title>
+    <title>ゼミ受講システム(学生一覧)</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css"/>
 
