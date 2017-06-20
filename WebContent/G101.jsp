@@ -10,7 +10,7 @@
 <body>
 	<h1>ホーム</h1>
 	<form class="form-horizontal" method="post" action="G101Login">
-
+<a href="">
 		<input type="submit" class="btn btn-primary" value="学生用ログイン">
 		<input type="submit" class="btn btn-primary" value="教師用ログイン">
 
