@@ -23,16 +23,9 @@
 			<tr>
 				<th>分野</th>
 				<td><select name="kamoku">
-						<option>IT</option>
-						<option>英語</option>
-						<option>コミュニケーション</option>
-				</select></td>
-			</tr>
-			<tr>
-				<th>曜日</th>
-				<td><select name="week">
-						<option>火曜</option>
-						<option>木曜</option>
+						<option value="1">IT</option>
+						<option value="2">英語</option>
+						<option value="3">コミュニケーション</option>
 				</select></td>
 			</tr>
 		</table>
