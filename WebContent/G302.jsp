@@ -6,16 +6,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="G304.css">
 <link rel="stylesheet" type="text/css" href="seminar.css">
-<link rel="stylesheet" type="text/css" href="seminar.css">
 
 <title>ゼミ科目一覧</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<center>
-	<div class="main">
-		<center>
+	<div class="main" align="center">
 		<h2>ゼミ科目一覧</h2>
+		
+			<div class="side" border="1">
+	<table border="1">
+	<tr><td>
+	<form method="GET" action="">
+	<select name="sub" size="1">
+	<option>IT</option></select><br/>
+	<input type="submit" name="change" value="変更">
+	<input type="submit" name="list" value="学生一覧">
+	
+	</form>
+	</td></tr>
+	</table>
+	</div>
+	
+		<div class="center">
 		<table border="1">
 			<tr>
 				<th>科目名</th>
@@ -43,17 +56,8 @@
 		</table>
 
 		<input type="button" value="登録" onclick="location.href=''">
-	</center>
-	
-	<div class="side" border="1">
-	<form method="GET" action="">
-	<select name="sub" size="1">
-	<option>IT</option></select><br/>
-	<input type="submit" name="change" value="変更">
-	<input type="submit" name="list" value="学生一覧">
-	
-	</form>
 	</div>
+
 	
 	</div>
 	<jsp:include page="footer.jsp" />
