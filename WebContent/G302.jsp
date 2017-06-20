@@ -49,8 +49,8 @@
 	<form method="GET" action="">
 	<select name="sub" size="1">
 	<option>IT</option></select><br/>
-	<input type="submit" name="change" value="change">
-	<input type="submit" name="list" value="list">
+	<input type="submit" name="change" value="変更">
+	<input type="submit" name="list" value="学生一覧">
 	
 	</form>
 	</div>
