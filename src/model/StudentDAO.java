@@ -18,15 +18,15 @@ import model.Student;
  */
 public class StudentDAO {
 
-	//データベース
-	DataSource ds = null; //データベース接続情報
+	// データベース
+	DataSource ds = null; // データベース接続情報
 	Connection con = null;
 	PreparedStatement stmt = null;
 	ResultSet rs = null;
 
-	//▼▼データベース接続▼▼
+	// ▼▼データベース接続▼▼
 	public Connection connection() throws Exception {
-		//データベースがなければ、context.xmlから読み込んで設定する
+		// データベースがなければ、context.xmlから読み込んで設定する
 		if (ds == null) {
 			ds = (DataSource) (new InitialContext()).lookup("java:comp/env/jdbc/MySQL");
 		}
@@ -35,9 +35,9 @@ public class StudentDAO {
 		return con;
 	}
 
-	//▼▼データベース切断▼▼
+	// ▼▼データベース切断▼▼
 	public void close() throws Exception {
-		//データベース接続されていれば、切断する
+		// データベース接続されていれば、切断する
 		if (rs != null) {
 			rs.close();
 		}

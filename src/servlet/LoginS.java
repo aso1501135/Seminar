@@ -41,9 +41,7 @@ public class LoginS extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
 
-		String path; // 分岐先のファイル名
 		HttpSession session = request.getSession();
 
 		// ユーザID、パスワードの取り出し
