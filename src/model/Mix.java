@@ -2,8 +2,8 @@
 public class Mix implements Serializable{
 
 
-	private String Seminar_Id;
-	private String Week;
+	private int Seminar_Id;
+	private int Week;
 
 	public Student(){}
 
@@ -11,15 +11,15 @@ public class Mix implements Serializable{
 		return Seminar_Id;
 	}
 
-	public void setSeminar_Id(String Seminar_Id) {
+	public void setSeminar_Id(int Seminar_Id) {
 		this.Seminar_Id = Seminar_Id;
 	}
 
-	public String getWeek() {
+	public int getWeek() {
 		return Week;
 	}
 
-	public void setWeek(String week) {
+	public void setWeek(int week) {
 		this.week = week;
 	}
 

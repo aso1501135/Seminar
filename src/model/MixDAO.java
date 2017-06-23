@@ -2,7 +2,7 @@
 public class MixDAO {
 
 
-	public void studentlist(String Seminar_Id, Stinrg week) {
+	public void getstudentseminar(int student_Id, int seminar_Id) {
 	//Seminar_Idは科目名
 	//weekは週
 	System.out.println("DAO");
@@ -11,11 +11,11 @@ public class MixDAO {
 		DbOpen();
 		System.out.println("DB脱出");
 
-	String sql ="SELECT Student_Id,Student_Name FROM student WHERE EXSISTS(SELECT * FROM );
+	String sql ="DELETE FROM seminarst WHERE studentId=? AND seminar_Id=?;
 	System.out.println(sql);
 	ps=con.prepareStatement(sql);
-	ps.setString(1, study);
-	ps.setString(2, subject);
+	ps.setInt(1, student_Id);
+	ps.setInt(2, seminar_Id);
 	int rs = ps.executeUpdate();
 
 
@@ -52,7 +52,7 @@ public class MixDAO {
 	}
 
 
-	public void getStudentList(String Seminar_Id, Srting week) {
+	public void getStudentList(int Seminar_Id, int week) {
 		//subjectは科目名
 		//studyは分野ID
 		System.out.println("DAO");
@@ -61,14 +61,14 @@ public class MixDAO {
 			DbOpen();
 			System.out.println("DB脱出");
 
-		String sql ="SELECT st.Class_Id,st.Student_Id FROM seminar se,student st"
+		String sql ="SELECT st.Class_Id,st.Student_Id FROM seminarst se,student st"
 				+ "WHERE se.student_id = st.student_id"
 				+"AND se.Seminar_Id=? AND se.week=?"
 				+"GROUP BY st.student,st.Class_Id";
 		System.out.println(sql);
 		ps=con.prepareStatement(sql);
-		ps.setString(1, Seminar_Id);
-		ps.setString(2, week);
+		ps.setint(1, Seminar_Id);
+		ps.setint(2, week);
 		rs=prestms=executeQuery();
 		System.out.println("挿入完了！");
 
