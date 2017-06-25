@@ -13,21 +13,21 @@
 	<jsp:include page="header.jsp" />
 	<div class="main" align="center">
 		<h2>ゼミ科目一覧</h2>
-		
+
 			<div class="side" border="1">
 	<table border="1">
 	<tr><td>
-	<form method="GET" action="">
+	<form method="POST" action="<%=request.getContextPath()%>/studentList?Seminar_Id = 1 & Week = 1">
 	<select name="sub" size="1">
 	<option>IT　プログラミング　火曜</option></select><br/>
 	<input type="submit" name="change" value="変更">
 	<input type="submit" name="list" value="学生一覧">
-	
+
 	</form>
 	</td></tr>
 	</table>
 	</div>
-	
+
 		<div class="center">
 		<table border="1">
 			<tr>
@@ -58,7 +58,7 @@
 		<input type="button" value="登録" onclick="location.href=''">
 	</div>
 
-	
+
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>

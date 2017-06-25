@@ -18,7 +18,7 @@
 				<th>科目名</th>
 				<td><form action="<%= request.getContextPath() %>/Register"
 						method="post">
-						<input type="text" size="16" placeholder="科目名"></td>
+						<input type="text" size="16" placeholder="科目名" name="subject"></td>
 			</tr>
 			<tr>
 				<th>分野</th>
