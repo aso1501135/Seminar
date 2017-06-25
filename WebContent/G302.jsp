@@ -19,7 +19,7 @@
 	<tr><td>
 	<form method="GET" action="">
 	<select name="sub" size="1">
-	<option>IT</option></select><br/>
+	<option>IT　プログラミング　火曜</option></select><br/>
 	<input type="submit" name="change" value="変更">
 	<input type="submit" name="list" value="学生一覧">
 	
