@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="G304.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <%--tableの中身は<c:forEach>で増やす予定
 エラーメッセージは<c:outで増やす予定 --%>
 <title>ゼミ科目登録</title>

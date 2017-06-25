@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>ゼミ科目登録</title>
-<link rel="stylesheet" type="text/css" href="G304.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="seminar.css">
 
 </head>
