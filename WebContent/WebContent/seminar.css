@@ -1,0 +1,10 @@
+th{
+	width:100px;
+}
+td{
+	width:150px;
+	text-align:center;
+}
+.side{
+	float:right;
+}

@@ -1,0 +1,20 @@
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color:#FFFFFF;
+  background-color:rgba(0,0,0,0.1);
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  border: solid 2px #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.btn:hover {
+    background: #b3e1ff;
+}

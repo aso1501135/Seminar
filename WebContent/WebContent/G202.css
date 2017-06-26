@@ -1,0 +1,9 @@
+table{
+	border:solid 1px #FFFFFF;
+}
+td{
+	border:solid 1px #FFFFFF;
+}
+td.delete{
+	border:none;
+}
