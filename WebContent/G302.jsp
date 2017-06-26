@@ -9,6 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="seminar.css">
+<link rel="stylesheet" type="text/css" href="G302.css">
+
 
 
 <title>ゼミ科目一覧</title>
@@ -37,8 +39,8 @@
 				</tr>
 			</table>
 		</div>
-		<div class="center">
-			<table border="1">
+		<div>
+			<table class="center" border="1">
 				<tr>
 					<th>科目名</th>
 					<th>曜日</th>
@@ -61,7 +63,7 @@
 
 			</table>
 
-			<input type="button" value="登録" onclick="location.href='G303.jsp'">
+			<input type="button" class="center" value="登録" onclick="location.href='G303.jsp'">
 		</div>
 	</div>
 	<jsp:include page="footer.jsp" />
