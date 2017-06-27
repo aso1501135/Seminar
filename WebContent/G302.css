@@ -1,3 +1,7 @@
 .center{
-	margin-left:160px;
+	margin-left:240px;
+}
+div.side{
+	float:right;
+	margin-right:100px;
 }
