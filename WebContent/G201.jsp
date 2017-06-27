@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>ログイン(学生)</title>
-<link rel="stylesheet" type="text/css" href="/seminar/css/G304.css">
 </head>
 <body>
 	<%@ include file="header.jsp"%>
