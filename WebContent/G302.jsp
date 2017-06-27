@@ -63,7 +63,7 @@
 
 			</table>
 
-			<input type="button" value="登録" onclick="location.href='G303.jsp'">
+			<input type="button" class="button" value="登録" onclick="location.href='G303.jsp'">
 		</div>
 	</div>
 	<jsp:include page="footer.jsp" />

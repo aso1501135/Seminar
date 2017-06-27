@@ -20,15 +20,13 @@
 			<form method="post" action="<%=request.getContextPath()%>/LoginT">
 				<table>
 					<tr>
-						<td>教師ID</td>
-						<td><input type="text" name="userid" size="10"></td>
+						<td><input type="text" name="userid" placeholder="教師ID" size="40"></td>
 					</tr>
 					<tr>
-						<td>パスワード</td>
-						<td><input type="password" name="pass" size="10"></td>
+						<td><input type="password" name="pass" placeholder="パスワード" size="40"></td>
 					</tr>
 				</table>
-				<br> <input type="submit" name="login" value="ログイン">
+				<br> <input type="submit" class="button" name="login" value="ログイン">
 			</form>
 		</div>
 	</div>

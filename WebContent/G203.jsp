@@ -5,7 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="G203.css">
-<link rel="stylesheet" type="text/css" href="seminar.css">
 
 <%--tableの中身は<c:forEach>で増やす予定
 エラーメッセージは<c:outで増やす予定 --%>
@@ -99,7 +98,10 @@
 		
 			<hr class="hr" color="#FFFFFF">
 		
-		<input type="submit" value="登録" />
+				
+		<input type="submit" class="button" value="戻る" />
+		
+		<input type="submit" class="button" value="登録" />
 	</form>
 	
 	</div>

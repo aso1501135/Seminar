@@ -21,20 +21,20 @@
 
 				<table border="1">
 					<tr>
-						<th>科目ID</td>
+						<th class="sub">科目ID</td>
 						<td>${id}</td>
 					</tr>
 					<tr>
-						<th>科目名</td>
-						<td><input type="text" name="seminarName"
+						<th class="sub">科目名</td>
+						<td><input type="text" class="text" name="seminarName"
 							placeholder="科目名"></input></td>
 					</tr>
 					<tr>
-						<th>分野ID</td>
+						<th class="sub">分野ID</td>
 						<td>分野ID取得</td>
 					</tr>
 					<tr>
-						<th>分野名</td>
+						<th class="sub">分野名</td>
 						<td><select name="fieldid" size=1>
 								<option value="1">IT</option>
 								<option value="2">英語</option>
@@ -43,9 +43,9 @@
 					</tr>
 				</table>
 
-				<input type="button" name="back" value="戻る">
-				<input type="button" name="delete" value="削除">
-				<input type="submit" name="save" value="保存">
+				<input type="button" class="button" name="back" value="戻る">
+				<input type="button" class="button" name="delete" value="削除">
+				<input type="submit" class="button" name="save" value="保存">
 			</form>
 	</div>
 	<%@ include file="footer.jsp"%>

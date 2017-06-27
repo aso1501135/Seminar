@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    	<%@ include file="/WEB-INF/jsp/common.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,21 +12,22 @@
 <div class="main" align="center">
 <h2>ログイン</h2>
 	<div id="target" style="color: red;">
+			<p>
+				<c:out value="${error}" />
+			</p>
 		<c:out value="${errorMessage}" />
 	</div>
 
 	<form method="post" action="/seminar/Login">
 		<table>
 			<tr>
-				<td>学生ID</td>
-				<td><input type="text" name="userid" size="10"></td>
+				<td><input type="text" name="userid" placeholder="学生ID" size="40"></td>
 			</tr>
 			<tr>
-				<td>パスワード</td>
-				<td><input type="password" name="pass" size="10"></td>
+				<td><input type="password" name="pass" placeholder="パスワード" size="40"></td>
 			</tr>
 		</table><br>
-		<input type="submit" value="ログイン">
+		<input type="submit" class="button" value="ログイン">
 	</form>
 </div>
 <%@ include file="footer.jsp"%>

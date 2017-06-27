@@ -19,12 +19,12 @@
 		
 		
 			<tr>
-				<th>科目名</th>
+				<th class="sub">科目名</th>
 				<td>
-						<input type="text" size="16" name="subject" placeholder="科目名"></td>
+						<input type="text" class="text" size="16" name="subject" placeholder="科目名"></td>
 			</tr>
 			<tr>
-				<th>分野</th>
+				<th class="sub">分野</th>
 				<td><select name="kamoku">
 						<option value="1">IT</option>
 						<option value="2">英語</option>
@@ -32,8 +32,7 @@
 				</select></td>
 			</tr>
 		</table>
-		<input type="button" value="戻る"> <input type="submit"
-			value="登録">
+		<input type="button" class="button" value="戻る"> <input type="submit" class="button" value="登録">
 		</form>
 
 	</div>

@@ -24,26 +24,24 @@
   </tr>
 
   <tr>
-    <td>言葉のマナー</td>
-    <td>木曜日</td>
-    <td>神永</td>
-    <td class="delete">
+    <td class="cell">言葉のマナー</td>
+    <td class="cell">木曜日</td>
+    <td class="cell">神永</td>
+    <td>
 	<input type="button" value="削除" onclick="location.href=''">
 	</td>
   </tr>
 
   <tr>
-    <td>方言</td>
-    <td>火曜日</td>
-    <td>神永</td>
-    <td class="delete">
+    <td class="cell">方言</td>
+    <td class="cell">火曜日</td>
+    <td class="cell">神永</td>
+    <td>
 	<input type="button" value="削除" onclick="location.href=''">
 	</td>
   </tr>
 </table>
-	<p>
-	<input type="button" value="科目の選択" onclick="location.href=''">
-	</p>
+	<input type="button" class="button" value="科目の選択" onclick="location.href=''">
 	</div>
 	<%@ include file="footer.jsp"%>
 </body>

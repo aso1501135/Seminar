@@ -9,6 +9,8 @@
 <title>ゼミ受講システム(学生一覧)</title>
 <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="G305.css"/>
+    <link rel="stylesheet" href="seminar.css"/>
+  
 </head>
 <body>
 <%@ include file="header.jsp"%>
@@ -21,8 +23,8 @@
 		</ul>
 		<table border="1">
 		<tr>
-			<th>クラス</th>
-			<th>氏名</th>
+			<th class="class">クラス</th>
+			<th class="name">氏名</th>
 		</tr>
 		<c:forEach var="list" items="${student}">
 		<tr>
@@ -31,8 +33,8 @@
 		</tr>
 		</c:forEach>
 	</table>
-	<input type="button" name="back" value="戻る">
-<input type="button" name="print" value="印刷">
+	<input type="button" class="button" name="back" value="戻る">
+<input type="button" class="button" name="print" value="印刷">
 
 </div>
 	<%@ include file="footer.jsp"%>
