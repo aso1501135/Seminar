@@ -14,17 +14,16 @@ public class DBOpenBean {
 	ResultSet rs = null;
 	Connection con = null;
 
-	// データベース接続
-	public Connection DbOpen() throws Exception {
-		// データソースがなければ、context.xmlから読み込んで設定する
-		if (ds == null) {
-			ds = (DataSource) (new InitialContext()).lookup("java:comp/env/jdbc/MySQL");
+	//データベース接続
+		public Connection DbOpen() throws Exception {
+			// データソースがなければ、context.xmlから読み込んで設定する
+			if (ds == null) {
+				ds = (DataSource) (new InitialContext()).lookup("java:comp/env/jdbc/MySQL");
+			}
+
+			con = ds.getConnection();
+			return con;
 		}
-
-		con = ds.getConnection();
-		return con;
-	}
-
 	public void DbClose() {
 		try {
 			if (rs != null) {

@@ -1,8 +1,9 @@
+
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.TeacherDAO;
-import model.Teacher;
+import model.MixDAO;
+import model.Seminar;
+import model.UserDAO;
 
 /**
  * Servlet implementation class LoginT
@@ -20,57 +22,42 @@ import model.Teacher;
 public class LoginT extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+	String path =null; // 分岐先のファイル名
+	Boolean flg;
+	UserDAO user = new UserDAO();
+	MixDAO mix = new MixDAO();
+
+
     public LoginT() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
 
-		String path; // 分岐先のファイル名
 		HttpSession session = request.getSession();
-
 		// ユーザID、パスワードの取り出し
-		int teacherId = Integer.parseInt(request.getParameter("teacherId"));
-		String password = request.getParameter("password");
-
-		TeacherDAO teacherDAO = new TeacherDAO();
-		Teacher teacher = new Teacher();
-
-		// IDとパスワードを使ってログインユーザ情報を受け取る
-		teacher = teacherDAO.getTeacher(teacherId, password);
-
-		if (teacher != null) {
-			System.out.println("ログイン成功");
-			// 会員情報をセッションに格納
-			session .setAttribute("teacher", teacher);
+		int userId = Integer.parseInt(request.getParameter("userid"));
+		String password = request.getParameter("pass");
+		user.setUserId(userId);
+		user.setPassword(password);
+		flg = user.getTeacher();
+		if (flg == true) {
+			ArrayList<Seminar> seminarList =new ArrayList<Seminar>();
+			seminarList = mix.seminarList();
+			System.out.println("nann");
+			System.out.println(seminarList);
+			session.setAttribute("List", seminarList);
 
 			path = "G302.jsp";
-
 		} else {
 			System.out.println("ログイン失敗");
-			request.setAttribute("errorMessage", "学生IDまたはパスワードが違います。");
+			request.setAttribute("errorMessage", "教師IDまたはパスワードが違います。");
 			path = "G301.jsp";
 		}
 
-		RequestDispatcher rd = request.getRequestDispatcher(path);
-		rd.forward(request, response);
+		request.getRequestDispatcher(path).forward(request, response);
+
 	}
 
 }

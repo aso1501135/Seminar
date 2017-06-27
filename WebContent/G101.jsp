@@ -11,12 +11,11 @@
 <body>
 	<%@ include file="header.jsp"%>
 <div class="main" align="center">
-	<form method="post" action="G101Login">
+
 		<input type="button" class="btn" name="student" value="学生用ログイン">
 		<input type="button" class="btn" name="student" value="教師用ログイン">
-	</form>
 	</div>
 	<%@ include file="footer.jsp"%>
-	
+
 </body>
 </html>

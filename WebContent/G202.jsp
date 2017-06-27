@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common.jsp"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="javax.servlet.http.HttpSession"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,36 +13,33 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-<div class="main" align="center">
-<table>
-  <tr>
-    <td>科目名</td>
-    <td>曜日</td>
-    <td>教師名</td>
-  </tr>
+	<div class="main" align="center">
+			<table border="1">
+				<tr>
+					<th>科目名</th>
+					<th>曜日</th>
+					<th>教師名</th>
+				</tr>
+				<c:forEach var="list" items="${lecture}" varStatus="status">
+					<tr>
+						<td>${list.seminar_Name}</td>
+						<c:choose>
+							<c:when test="${list.week == 1}">
+								<td>火曜日</td>
+							</c:when>
+							<c:when test="${list.week == 2}">
+								<td>木曜日</td>
+							</c:when>
+						</c:choose>
+						<td>${list.teacher_Name}</td>
+						<td><button type="submit" name="delete" onclick="window.location.href='Delete?number=${status.index}&seminarid=${list.seminar_Id}&week=${list.week}'">削除</button></td>
+					</tr>
+				</c:forEach>
+			</table>
 
-  <tr>
-    <td>言葉のマナー</td>
-    <td>木曜日</td>
-    <td>神永</td>
-    <td class="delete">
-	<input type="button" value="削除" onclick="location.href=''">
-	</td>
-  </tr>
-
-  <tr>
-    <td>方言</td>
-    <td>火曜日</td>
-    <td>神永</td>
-    <td class="delete">
-	<input type="button" value="削除" onclick="location.href=''">
-	</td>
-  </tr>
-</table>
-	<p>
-	<input type="button" value="科目の選択" onclick="location.href=''">
-	</p>
+		<input type="submit" name="regist" value="受講科目申請" onclick="location.href='G203.jsp'">
 	</div>
+
 	<%@ include file="footer.jsp"%>
 </body>
 </html>

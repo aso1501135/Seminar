@@ -1,26 +1,26 @@
+package model;
+
+import java.io.Serializable;
 
 public class Mix implements Serializable{
 
 
-	private int Seminar_Id;
-	private int Week;
-
-	public Student(){}
-
-	public int getSeminar_Id() {
-		return Seminar_Id;
+	private String Class_Name;
+	private String Student_Name;
+	public String getClass_Name() {
+		return Class_Name;
 	}
-
-	public void setSeminar_Id(int Seminar_Id) {
-		this.Seminar_Id = Seminar_Id;
+	public void setClass_Name(String class_Name) {
+		Class_Name = class_Name;
 	}
-
-	public int getWeek() {
-		return Week;
+	public String getStudent_Name() {
+		return Student_Name;
 	}
-
-	public void setWeek(int week) {
-		this.week = week;
+	public void setStudent_Name(String student_Name) {
+		Student_Name = student_Name;
 	}
+	public Mix(){}
+
+
 
 }

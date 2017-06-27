@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,41 +8,45 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import model.SeminerDAO;
 
 /**
- * Servlet implementation class Register
+ * Servlet implementation class SubjectMake
  */
-@WebServlet("/Register")
-public class Register extends HttpServlet {
+@WebServlet("/SubjectMake")
+public class SubjectMake extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	SeminerDAO sedb = new SeminerDAO();
-	Connection con;
+	SeminerDAO seminar = new SeminerDAO();
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Register() {
+    public SubjectMake() {
         super();
         // TODO Auto-generated constructor stub
     }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		if(request.getParameter("delete") != null){
+		} else if(request.getParameter("save") !=null){
+			request.getParameter("subject");
+			seminar.delete();
+
+		}
+		RequestDispatcher rd = request.getRequestDispatcher("G302.jsp");
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		String subject =request.getParameter("subject");
-		int study =Integer.parseInt(request.getParameter("kamoku"));
-		//String week = request.getParameter("week");
-		System.out.println("DAOへGO");
-		sedb.register(subject,study);
-		System.out.println("DAO脱出");
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/G302.jsp");
-		rd.forward(request, response);
+		doGet(request, response);
 	}
 
 }
