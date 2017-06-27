@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<hr color="#000000">
+<hr color="#FFFFFF">
 Copyright ©︎ GP.All Rights Reserved
 </body>
 </html>
