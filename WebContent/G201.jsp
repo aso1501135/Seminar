@@ -13,7 +13,6 @@
 	<%@ include file="header.jsp"%>
 <div class="main" align="center">
 <h2>ログイン</h2>
-	<p>学生IDとパスワードを入力してください<br>
 	<div id="target" style="color: red;">
 		<c:out value="${errorMessage}" />
 	</div>
