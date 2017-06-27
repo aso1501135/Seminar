@@ -1,0 +1,30 @@
+li{
+	display:inline-block;
+	margin-left:90px;
+	margin-right:90px;
+}
+.eng{
+	display:inline-block;
+	width:180px;
+	margin-left:90px;
+}
+.it{
+	display:inline-block;
+	width:180px;
+	margin-left:90px;
+}
+.com{
+	display:inline-block;
+	width:180px;
+	margin-left:90px;
+}
+ul{
+	padding:0;
+}
+p{
+	text-align:left;
+}
+.hr{
+	margin-left:300px;
+	margin-right:300px;
+}

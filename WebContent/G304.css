@@ -1,0 +1,16 @@
+body{
+	background-color:#83b9ff;
+}
+.main{
+	background-color:white;
+	border-radius:20px;
+	margin:0;
+	padding:10px
+}
+
+.main h2{
+	padding-top: 5px;
+	padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
