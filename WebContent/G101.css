@@ -13,6 +13,7 @@
   overflow: hidden;
   font-weight: bold;
   transition: .4s;
+  font-size: 100px;
 }
 
 .btn:hover {

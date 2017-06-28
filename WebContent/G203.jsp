@@ -24,12 +24,12 @@
 				</ul>
 				<div class="eng">
 					<c:forEach var="english" items="${EngList}"><c:choose><c:when test="${english.week == 1}">
-								<p><input type="checkbox" name="tuesday" value="${english.seminar_Id}" />${english.seminar_Name}</p>
+								<p><input type="checkbox" class="check" name="tuesday" value="${english.seminar_Id}" />${english.seminar_Name}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 				<div class="eng">
 					<c:forEach var="english" items="${EngList}"><c:choose><c:when test="${english.week == 2}">
-								<p><input type="checkbox" name="thursday" value="${english.seminar_Id}" />${english.seminar_Name}</p>
+								<p><input type="checkbox" class="check" name="thursday" value="${english.seminar_Id}" />${english.seminar_Name}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 			</div>
@@ -46,12 +46,12 @@
 				</ul>
 				<div class="it">
 					<c:forEach var="it" items="${ItList}"><c:choose><c:when test="${it.week == 1}">
-								<p><input type="checkbox" name="tuesday" value="${it.seminar_Id}" />${it.seminar_Name}${it.week}</p>
+								<p><input type="checkbox" class="check" name="tuesday" value="${it.seminar_Id}" />${it.seminar_Name}${it.week}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 				<div class="it">
 					<c:forEach var="it" items="${ItList}"><c:choose><c:when test="${it.week == 2}">
-								<p><input type="checkbox" name="thursday" value="${it.seminar_Id}" />${it.seminar_Name}${it.week}</p>
+								<p><input type="checkbox" class="check" name="thursday" value="${it.seminar_Id}" />${it.seminar_Name}${it.week}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 			</div>
@@ -66,12 +66,12 @@
 				</ul>
 				<div class="com">
 					<c:forEach var="commun" items="${CommunList}"><c:choose><c:when test="${commun.week == 1}">
-								<p><input type="checkbox" name="tuesday" value="${commun.seminar_Id}" />${commun.seminar_Name}${commun.week}</p>
+								<p><input type="checkbox" class="check" name="tuesday" value="${commun.seminar_Id}" />${commun.seminar_Name}${commun.week}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 				<div class="com">
 					<c:forEach var="commun" items="${CommunList}"><c:choose><c:when test="${commun.week == 2}">
-								<p><input type="checkbox" name="thursday" value="${commun.seminar_Id}" />${commun.seminar_Name}${commun.week}</p>
+								<p><input type="checkbox" class="check" name="thursday" value="${commun.seminar_Id}" />${commun.seminar_Name}${commun.week}</p>
 							</c:when></c:choose></c:forEach>
 				</div>
 			</div>
