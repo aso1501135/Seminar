@@ -18,7 +18,7 @@
 	<jsp:include page="header.jsp" />
 	<div class="main" align="center">
 		<h2>ゼミ科目一覧</h2>
-		<div class="side" border="1">
+		<div class="side" border="1" width="250px">
 			<table border="1">
 				<tr>
 					<td>
@@ -40,8 +40,8 @@
 
 									</option>
 								</c:forEach>
-							</select> <br /> <input type="submit" name="change" value="変更"> <input
-								type="submit" name="student" value="学生一覧">
+							</select> <br /> <input type="submit" class="button" name="change" value="変更"> <input
+								type="submit" class="button" name="student" value="学生一覧">
 
 						</form>
 					</td>
@@ -51,9 +51,9 @@
 		<div class="center">
 			<table border="1">
 				<tr>
-					<th>科目名</th>
-					<th>曜日</th>
-					<th>教師名</th>
+					<th width="250px">科目名</th>
+					<th width="60px">曜日</th>
+					<th width="150px">教師名</th>
 				</tr>
 				<c:forEach var="list" items="${List}">
 					<tr>

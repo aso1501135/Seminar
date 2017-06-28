@@ -4,7 +4,8 @@
 div.side{
 	float:right;
 	margin-right:100px;
+	width:270px;
 }
 select{
-	width:100px;
+	width:200px;
 }
