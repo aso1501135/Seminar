@@ -45,8 +45,6 @@ public class LoginT extends HttpServlet {
 		if (flg == true) {
 			ArrayList<Seminar> seminarList =new ArrayList<Seminar>();
 			seminarList = mix.seminarList();
-			System.out.println("nann");
-			System.out.println(seminarList);
 			session.setAttribute("List", seminarList);
 
 			path = "G302.jsp";

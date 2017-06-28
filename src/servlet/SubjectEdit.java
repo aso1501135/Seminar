@@ -43,17 +43,30 @@ public class SubjectEdit extends HttpServlet {
 		if(request.getParameter("change") !=null){
 			String se[] =request.getParameterValues("seminar");
 			int id = Integer.parseInt(se[0]);
-			seminar.setSubjectId(id);
-			request.setAttribute("id", id);
+			//ArrayList<Seminar> lecture = (ArrayList<Seminar>)session.getAttribute("lecture");
+			//int seminarid = getSeminar_Id();
+			request.setAttribute("seminarid", id);
 			path = "G304.jsp";
+
 		} else if(request.getParameter("student") !=null){
+
+			String se[] =request.getParameterValues("seminar");
+			int id = Integer.parseInt(se[0]);
+			//String seminarname = se[1];
+			//int week = Integer.parseInt(se[2]);
+			//ArrayList<Seminar> lecture = (ArrayList<Seminar>)session.getAttribute("lecture");
+			//String seminarname = lecture.get(id).getSeminar_Name();
+			//int week=lecture.get(id).getWeek();
 			ArrayList<Mix> studentlist = new ArrayList<Mix>();
-			int id = Integer.parseInt(request.getParameter("seminar"));
 			studentlist = mix.getStudentList(id);
+			int member = studentlist.size();
+			//session.setAttribute("seminarname", seminarname);
+			//session.setAttribute("week", week);
+			session.setAttribute("id", id);
+			session.setAttribute("member", member);
 			session.setAttribute("student", studentlist);
 			path = "G305.jsp";
 		}
-		String subjectName = request.getParameter("seminarName");
 		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request,response);
 

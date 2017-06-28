@@ -15,18 +15,20 @@
 		<h2>ログイン</h2>
 
 		<div class="login">
+			<p>教師IDとパスワードを入力してください</p>
+
 			<p color="red"><c:out value="${errorMessage}" /></p>
 
 			<form method="post" action="<%=request.getContextPath()%>/LoginT">
 				<table>
 					<tr>
-						<td><input type="text" name="userid" placeholder="教師ID" size="40"></td>
+						<td><input type="text" name="userid" size="40" placeholder="教師ID"></td>
 					</tr>
 					<tr>
-						<td><input type="password" name="pass" placeholder="パスワード" size="40"></td>
+						<td><input type="password" name="pass" size="40" placeholder="パスワード"></td>
 					</tr>
 				</table>
-				<br> <input type="submit" class="button" name="login" value="ログイン">
+				<br> <input type="submit" name="login" class ="button" value="ログイン">
 			</form>
 		</div>
 	</div>

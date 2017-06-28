@@ -10,12 +10,13 @@ public class MixDAO extends DBOpenBean {
 			String sql;
 			DbOpen();
 			sql = "SELECT sst.Seminar_Id,se.Seminar_Name,sst.Week,te.Teacher_Name,ca.Category_Id,ca.Category_Name "
-					+ " FROM seminarst sst"
-					+ " JOIN seminar se ON sst.Seminar_Id = se.Seminar_Id"
-					+ " JOIN seminarte st ON st.Seminar_Id = sst.Seminar_Id"
+					+ " FROM seminarst sst "
+					+ " JOIN seminar se ON sst.Seminar_Id = se.Seminar_Id "
+					+ " JOIN seminarte st ON st.Seminar_Id = sst.Seminar_Id "
 					+ " JOIN teacher te ON st.Teacher_Id = te.Teacher_Id "
-					+ " JOIN category ca ON se.Category_Id = ca.Category_Id"
-					+ " WHERE sst.Student_Id = ?";
+					+ " JOIN category ca ON se.Category_Id = ca.Category_Id "
+					+ " WHERE sst.Student_Id = ? "
+					+ " AND sst.Week = st.Week ";
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, userid);
 			rs = ps.executeQuery();
@@ -47,25 +48,19 @@ public class MixDAO extends DBOpenBean {
 	public void teacherlist(String subject, int study) {
 		// subjectは科目名
 		// studyは分野ID
-		System.out.println("DAO");
 		try {
-			System.out.println("DBへGO");
 			DbOpen();
-			System.out.println("DB脱出");
-
 			String sql = "INSERT INTO seminar (Category_Id,Seminar_Name) VALUES (?,?)";
-			System.out.println(sql);
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, study);
 			ps.setString(2, subject);
-			int rs = ps.executeUpdate();
-			System.out.println("挿入完了！");
+			ps.executeUpdate();
 		} catch (Exception e) {
 
 		}
 
 	}
-
+	//G302.jspの科目等の出力
 	public ArrayList<Seminar> seminarList() {
 
 		ArrayList<Seminar> seminarlist = new ArrayList<Seminar>();
@@ -78,10 +73,11 @@ public class MixDAO extends DBOpenBean {
 					+ "JOIN category ON seminar.Category_Id = category.Category_Id ";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
-			System.out.println("SQL完");
+			int index =0;
 			while (rs.next()){
 
 				Seminar se = new Seminar();
+				se.setIndex(index++);
 				se.setSeminar_Id(rs.getInt("Seminar_Id"));
 				se.setSeminar_Name(rs.getString("Seminar_Name"));
 				se.setWeek(rs.getInt("Week"));
@@ -89,10 +85,6 @@ public class MixDAO extends DBOpenBean {
 				se.setCategory_Id(rs.getInt("Category_Id"));
 				se.setCategory_Name(rs.getString("Category_Name"));
 				seminarlist.add(se);
-				System.out.println(seminarlist);
-
-
-
 			}
 		} catch (Exception e) {
 			System.out.println("エラーか？");

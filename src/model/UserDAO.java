@@ -21,11 +21,9 @@ public class UserDAO extends DBOpenBean {
 	public void setUserName(String userName){
 		UserName = userName;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -75,7 +73,6 @@ public class UserDAO extends DBOpenBean {
 				setUserName(name);
 				return true;
 			}
-
 		} catch (Exception e) {
 
 		}finally{

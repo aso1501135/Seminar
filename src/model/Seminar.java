@@ -9,9 +9,10 @@ public class Seminar implements Serializable{
 	private String Category_Name;
 	private String Teacher_Name;
 	private int Week;
+	private int index;
+
 	public Seminar(){}
 	public Seminar(int Seminar_Id,String Seminar_Name,int Category_Id,String Category_Name,String Teacher_Name,int Week) {
-		System.out.println("きてる？");
 		this.Seminar_Id = Seminar_Id;
 		this.Seminar_Name = Seminar_Name;
 		this.Category_Id = Category_Id;
@@ -66,6 +67,12 @@ public class Seminar implements Serializable{
 
 	public void setWeek(int week) {
 		this.Week = week;
+	}
+	public int getIndex() {
+		return index;
+	}
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 

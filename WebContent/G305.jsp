@@ -7,24 +7,29 @@
 <html>
 <head>
 <title>ゼミ受講システム(学生一覧)</title>
-<link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="G305.css"/>
-    <link rel="stylesheet" href="seminar.css"/>
-  
+<link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="G305.css"/>
+    <link rel="stylesheet" type="text/css" href="seminar.css"/>
 </head>
 <body>
 <%@ include file="header.jsp"%>
 <div class="main" align="center">
     <h2>学生一覧</h2>
     <ul class="table">
-		<li>曜日:火</li>
-		<li>科目名</li>
-		<li>受講者:1</li>
+		<li>曜日:<c:if test="${List[id].week == 1}">
+		火曜日
+		</c:if>
+		<c:if test="${List[id].week == 2}">
+		木曜日
+		</c:if>
+		</li>
+		<li>科目名:${List[id].seminar_Name}</li>
+		<li>受講者:${member}人</li>
 		</ul>
 		<table border="1">
 		<tr>
-			<th class="class">クラス</th>
-			<th class="name">氏名</th>
+			<th>クラス</th>
+			<th>氏名</th>
 		</tr>
 		<c:forEach var="list" items="${student}">
 		<tr>
@@ -38,6 +43,6 @@
 
 </div>
 	<%@ include file="footer.jsp"%>
-	
+
 </body>
 </html>

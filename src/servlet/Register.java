@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,38 +12,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.MixDAO;
+import model.Seminar;
 import model.SeminerDAO;
 
-/**
- * Servlet implementation class Register
- */
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	SeminerDAO sedb = new SeminerDAO();
+	MixDAO mix = new MixDAO();
 	Connection con;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public Register() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		String subject =request.getParameter("subject");
 		int study =Integer.parseInt(request.getParameter("kamoku"));
-		//String week = request.getParameter("week");
 		sedb.register(subject,study);
-		System.out.println("DAO脱出");
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/G302.jsp");
-		rd.forward(request, response);
+		ArrayList<Seminar> List = (ArrayList<Seminar>)session.getAttribute("List");
+		List = mix.seminarList();
+		session.setAttribute("List",List);
+		RequestDispatcher rd = request.getRequestDispatcher("G302.jsp");
 	}
 
 }

@@ -8,9 +8,9 @@
 	display: table;
 	table-layout: fixed;
 	text-align: center;
- 	width: 400px;
+ 	width: 400px;;
  	padding:0px;
-	
+
 }
 th.name{
 	width:250px;

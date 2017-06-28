@@ -17,25 +17,25 @@
 	<div class="main" align="center">
 			<h2>ゼミ科目 編集</h2>
 			<form method="GET"
-				action="<%=request.getContextPath()%>/SubjectEdit">
+				action="<%=request.getContextPath()%>/SubjectMake">
 
 				<table border="1">
 					<tr>
-						<th class="sub">科目ID</td>
-						<td>${id}</td>
+						<th class="sub">科目ID</th>
+						<td>${seminarid}<input type="hidden" name="subject" value="${seminarid}"/></td>
 					</tr>
 					<tr>
-						<th class="sub">科目名</td>
+						<th>科目名</th>
 						<td><input type="text" class="text" name="seminarName"
 							placeholder="科目名"></input></td>
 					</tr>
 					<tr>
-						<th class="sub">分野ID</td>
+						<th class="sub">分野ID</th>
 						<td>分野ID取得</td>
 					</tr>
 					<tr>
-						<th class="sub">分野名</td>
-						<td><select name="fieldid" size=1>
+						<th class="sub">分野名</th>
+						<td><select name="category" size=1>
 								<option value="1">IT</option>
 								<option value="2">英語</option>
 								<option value="3">コミュニケーション</option>

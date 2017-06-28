@@ -12,7 +12,6 @@
 <link rel="stylesheet" type="text/css" href="G302.css">
 
 
-
 <title>ゼミ科目一覧</title>
 </head>
 <body>
@@ -26,13 +25,23 @@
 						<form method="GET"
 							action="<%=request.getContextPath()%>/SubjectEdit">
 							<select name="seminar" size="1">
-							<c:forEach var="list" items="${List}">
-								<option value="${list.seminar_Id}">${list.seminar_Id}${list.seminar_Name}</option>
+								<c:forEach var="list" items="${List}">
+									<option value="${list.index}">
+										${list.index}${list.seminar_Name}
+										<c:choose>
+											<c:when test="${list.week == 1}">
+								火曜日
+							</c:when>
+											<c:when test="${list.week == 2}">
+								木曜日
+							</c:when>
+
+										</c:choose>
+
+									</option>
 								</c:forEach>
-							</select>
-							<br />
-							<input type="submit" name="change" value="変更">
-							<input type="submit" name="student" value="学生一覧">
+							</select> <br /> <input type="submit" name="change" value="変更"> <input
+								type="submit" name="student" value="学生一覧">
 
 						</form>
 					</td>
@@ -63,7 +72,7 @@
 
 			</table>
 
-			<input type="button" class="button" value="登録" onclick="location.href='G303.jsp'">
+			<input type="button" class="button" value="登録" onclick="location.href='Register'">
 		</div>
 	</div>
 	<jsp:include page="footer.jsp" />

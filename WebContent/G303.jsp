@@ -16,15 +16,15 @@
 		<form action="<%=request.getContextPath()%>/Register"
 						method="post">
 		<table border="1">
-		
-		
+
+
 			<tr>
 				<th class="sub">科目名</th>
 				<td>
 						<input type="text" class="text" size="16" name="subject" placeholder="科目名"></td>
 			</tr>
 			<tr>
-				<th class="sub">分野</th>
+				<th>分野</th>
 				<td><select name="kamoku">
 						<option value="1">IT</option>
 						<option value="2">英語</option>
@@ -32,11 +32,11 @@
 				</select></td>
 			</tr>
 		</table>
-		<input type="button" class="button" value="戻る"> <input type="submit" class="button" value="登録">
+		<input type="button" class="button" value="戻る">
+		<input type="submit" class="button" value="登録">
 		</form>
 
 	</div>
-		<%@ include file="footer.jsp"%>
-	
+	<%@ include file="footer.jsp" %>
 </body>
 </html>

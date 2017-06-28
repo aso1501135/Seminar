@@ -48,6 +48,7 @@ public class LoginS extends HttpServlet {
 		user.setUserId(userId);
 		user.setPassword(password);
 		flg = user.getStudent();
+		
 		if(flg == true){
 			ArrayList<Seminar> list = new ArrayList<Seminar>();
 			list = mix.lecturelist(user.getUserId());
@@ -56,7 +57,6 @@ public class LoginS extends HttpServlet {
 			path = "G202.jsp";
 
 		}else{
-			System.out.println("ログイン失敗");
 			request.setAttribute("errorMessage", "生徒IDまたはパスワードが違います。");
 			path = "G201.jsp";
 		}
