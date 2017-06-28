@@ -19,9 +19,9 @@
 	<div class="main" align="center">
 			<table>
 				<tr>
-					<th class="cell">科目名</th>
-					<th class="cell">曜日</th>
-					<th class="cell">教師名</th>
+					<th width="250px">科目名</th>
+					<th width="60px">曜日</th>
+					<th width="150px">教師名</th>
 				</tr>
 				<c:forEach var="list" items="${lecture}" varStatus="status">
 					<tr>
