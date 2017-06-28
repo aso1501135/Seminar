@@ -19,13 +19,13 @@
 	<div class="main" align="center">
 			<table>
 				<tr>
-					<th>科目名</th>
-					<th>曜日</th>
-					<th>教師名</th>
+					<th class="cell">科目名</th>
+					<th class="cell">曜日</th>
+					<th class="cell">教師名</th>
 				</tr>
 				<c:forEach var="list" items="${lecture}" varStatus="status">
 					<tr>
-						<td>${list.seminar_Name}</td>
+						<td class="cell">${list.seminar_Name}</td>
 						<c:choose>
 							<c:when test="${list.week == 1}">
 								<td>火曜日</td>
